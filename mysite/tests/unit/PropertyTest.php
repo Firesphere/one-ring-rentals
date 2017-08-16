@@ -66,4 +66,18 @@ class PropertyTest extends SapphireTest
         ]);
         $this->assertFalse($property->isAvailable());
     }
+
+    public function testIsAvailableException()
+    {
+        // Create a property with an available date.
+        $property = new Property([
+            'AvailableStart' => "garbage",
+            'AvailableEnd' => "grabalce"
+        ]);
+
+        $this->expectException(Exception::class);
+
+        $property->isAvailable();
+
+    }
 }
