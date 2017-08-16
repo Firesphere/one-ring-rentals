@@ -2,6 +2,12 @@ SilverStripe\GraphQL\Controller:
   schema:
     queries:
       readProperties: 'ReadPropertiesQueryCreator'
+      paginatedReadProperties: 'PaginatedReadPropertiesQueryCreator'
+    mutations:
+      createProperty: 'CreatePropertyMutationCreator'
+    types:
+      Property: 'PropertyTypeCreator'
+      Region: 'RegionTypeCreator'
     scaffolding:
       types:
         Property:
