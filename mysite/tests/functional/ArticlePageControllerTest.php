@@ -9,7 +9,7 @@ use SilverStripe\Forms\Form;
 /**
  *
  */
-class ArticlePageTest extends FunctionalTest
+class ArticlePageControllerTest extends FunctionalTest
 {
 
     protected $usesDatabase = true;
