@@ -2,6 +2,8 @@
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Assets\File;
+use SilverStripe\GraphQL\Scaffolding\Interfaces\ScaffoldingProvider;
+use SilverStripe\GraphQL\Scaffolding\Scaffolders\SchemaScaffolder;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\Forms\DateField;
@@ -19,14 +21,13 @@ use SilverStripe\Forms\DropdownField;
  * @property string Author
  * @method DataList Comments
  */
-class ArticlePage extends Page
+class ArticlePage extends Page implements ScaffoldingProvider
 {
     private static $db = array(
         'Date' => 'Date',
         'Teaser' => 'Text',
         'Author' => 'Varchar',
     );
-
 
     private static $has_one = array(
         'Photo' => Image::class,
@@ -87,4 +88,32 @@ class ArticlePage extends Page
         }
     }
 
+
+    /**
+     * By declaring these two operations, we have automatically added a new query and mutation
+     * to the GraphQL schema, using naming conventions derived from the operation type and the
+     * singular_name or plural_name of the DataObject.
+     *
+     * @param SchemaScaffolder $scaffolder
+     * @return SchemaScaffolder
+     */
+    public function provideGraphQLScaffolding(SchemaScaffolder $scaffolder)
+    {
+        $scaffolder
+            ->type("ArticlePage")
+                ->addFields(array_keys(self::$db))
+                ->operation(SchemaScaffolder::READ)
+                    ->end()
+                ->operation(SchemaScaffolder::UPDATE)
+                    ->end()
+                ->nestedQuery('Comments')
+                    ->end()
+                ->end()
+            ->type("ArticleComment")
+                ->addAllFields()
+                ->operation(SchemaScaffolder::READ)
+                    ->end();
+
+        return $scaffolder;
+    }
 }
