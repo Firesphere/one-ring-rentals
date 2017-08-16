@@ -86,10 +86,11 @@ class ArticlePageTest extends FunctionalTest
 
         // Submitting the form again, posts the comment, and email's gandalf, that someone has replied.
         $this->submitForm('Form_CommentForm',null, [
-            'Name' => 'Gandalf',
-            'Email' => 'gandalf@theshire.com',
-            'Comment' => "Hi, this special article interests me a great deal, we should have some fireworks and a rather
-            large party soon!, \n\n Regards, Gandalf."
+            'Name' => 'Bilbo baggins',
+            'Email' => 'bilbo@theshire.com',
+            'Comment' => "Hi, is a new comment!, \n\n Regards, Gandalf."
         ]);
+
+        $this->assertNotNull($this->findEmail("gandalf@theshire.com"));
     }
 }

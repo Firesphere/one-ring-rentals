@@ -57,12 +57,12 @@ class ArticlePageController extends PageController
             return $this->redirectBack();
         }
 
-        $this->notifyOfNewComment();
-
         $comment = ArticleComment::create();
         $comment->ArticlePageID = $this->ID;
         $form->saveInto($comment);
         $comment->write();
+
+        $this->notifyOfNewComment();
 
         $this->getRequest()->getSession()->clear("FormData.{$form->getName()}.data");
         $form->sessionMessage('Thanks for your comment', 'good');

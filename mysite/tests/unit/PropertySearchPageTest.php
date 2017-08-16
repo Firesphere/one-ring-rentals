@@ -32,7 +32,7 @@ class PropertySearchPageTest extends SapphireTest
     protected function createMockHTTPRequest($map)
     {
         $stub = $this->createMock('\SilverStripe\Control\HTTPRequest');
-        $stub->method('getVar')
+        $stub->method('requestVar')
             ->will($this->returnValueMap($map));
 
         return $stub;
