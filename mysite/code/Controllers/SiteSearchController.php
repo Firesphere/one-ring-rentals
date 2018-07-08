@@ -18,7 +18,6 @@ use SilverStripe\FullTextSearch\Search\Queries\SearchQuery;
  */
 class SiteSearchController extends PageController
 {
-
     protected $Query;
 
     public function index(HTTPRequest $request)

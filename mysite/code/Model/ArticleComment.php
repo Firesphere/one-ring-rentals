@@ -13,7 +13,6 @@ use SilverStripe\ORM\DataObject;
  */
 class ArticleComment extends DataObject
 {
-
     private static $db = array(
         'Name' => 'Varchar',
         'Email' => 'Varchar',

@@ -6,5 +6,4 @@
  */
 class PropertySearchPage extends Page
 {
-
 }

@@ -17,7 +17,6 @@ use SilverStripe\ORM\DataExtension;
  */
 class SiteConfigExtension extends DataExtension
 {
-
     private static $db = array(
         'FacebookLink'  => 'Varchar',
         'TwitterLink'   => 'Varchar',
@@ -34,7 +33,8 @@ class SiteConfigExtension extends DataExtension
             TextField::create('GoogleLink', 'Google'),
             TextField::create('YouTubeLink', 'YouTube')
         ));
-        $fields->addFieldToTab('Root.Main',
+        $fields->addFieldToTab(
+            'Root.Main',
             TextareaField::create('FooterContent', 'Content for footer')
         );
     }

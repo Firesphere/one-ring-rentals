@@ -2,11 +2,12 @@
     "name": "silverstripe/installer",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": ">=5.6.0",
-        "silverstripe/recipe-cms": "^1.0",
-        "silverstripe-themes/simple": "~3.2.0",
+        "php": ">=5.6",
+        "silverstripe/recipe-cms": "^4.1",
+        "silverstripe-themes/simple": "^3.2",
         "silverstripe/fulltextsearch-localsolr": "dev-master",
-        "silverstripe/fulltextsearch": "dev-master"
+        "silverstripe/fulltextsearch": "^3.3",
+        "silverstripe/upgrader": "^1.2"
     },
     "require-dev": {
         "silverleague/ideannotator": "dev-master",

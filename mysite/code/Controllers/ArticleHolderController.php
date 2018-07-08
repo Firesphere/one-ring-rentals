@@ -13,7 +13,6 @@ use SilverStripe\ORM\PaginatedList;
  */
 class ArticleHolderController extends PageController
 {
-
     private static $allowed_actions = array(
         'category',
         'region',
@@ -99,7 +98,6 @@ class ArticleHolderController extends PageController
             'StartDate' => DBField::create_field('SS_DateTime', $startDate),
             'EndDate'   => DBField::create_field('SS_DateTime', $endDate)
         );
-
     }
 
 
@@ -110,6 +108,4 @@ class ArticleHolderController extends PageController
             $this->getRequest()
         )->setPageLength($num);
     }
-
-
 }

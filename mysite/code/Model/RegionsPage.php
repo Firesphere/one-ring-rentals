@@ -11,7 +11,6 @@ use SilverStripe\Control\HTTPRequest;
  */
 class RegionsPage extends Page
 {
-
     private static $has_many = array(
         'Regions' => 'Region',
     );

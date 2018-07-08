@@ -18,7 +18,6 @@ use SilverStripe\ORM\PaginatedList;
  */
 class PropertySearchPageController extends PageController
 {
-
     public function index(HTTPRequest $request)
     {
         $properties = Property::get();

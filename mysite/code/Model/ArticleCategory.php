@@ -14,7 +14,6 @@ use SilverStripe\ORM\DataObject;
  */
 class ArticleCategory extends DataObject
 {
-
     private static $db = array(
         'Title' => 'Varchar'
     );
@@ -43,5 +42,4 @@ class ArticleCategory extends DataObject
             'category/' . $this->ID
         );
     }
-
 }

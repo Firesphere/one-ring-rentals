@@ -10,7 +10,6 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\DropdownField;
 
-
 /**
  * Class \ArticlePage
  *
@@ -62,8 +61,10 @@ class ArticlePage extends Page
         $fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
         $fields->addFieldToTab('Root.Main', TextField::create('Author', 'Author of article'), 'Content');
         $fields->addFieldToTab('Root.Attachments', $photo = UploadField::create('Photo'));
-        $fields->addFieldToTab('Root.Attachments',
-            $brochure = UploadField::create('Brochure', 'Travel brochure, optional (PDF only)'));
+        $fields->addFieldToTab(
+            'Root.Attachments',
+            $brochure = UploadField::create('Brochure', 'Travel brochure, optional (PDF only)')
+        );
 
         $photo->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
         $photo->setFolderName('travel-photos');
@@ -93,5 +94,4 @@ class ArticlePage extends Page
             return implode(', ', $this->Categories()->column('Title'));
         }
     }
-
 }

@@ -46,12 +46,10 @@ class PageController extends ContentController
         Requirements::javascript("{$this->ThemeDir()}/js/common/nice-scroll.js");
         Requirements::javascript("{$this->ThemeDir()}/js/common/jquery-browser.js");
         Requirements::javascript("{$this->ThemeDir()}/js/scripts.js");
-
     }
 
     public function ThemeDir()
     {
         return ThemeResourceLoader::inst()->getPath('one-ring');
     }
-
 }

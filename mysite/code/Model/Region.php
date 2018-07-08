@@ -21,7 +21,6 @@ use SilverStripe\ORM\DataObject;
  */
 class Region extends DataObject
 {
-
     private static $db = array(
         'Title' => 'Varchar',
         'Description' => 'HTMLText',
@@ -91,6 +90,4 @@ class Region extends DataObject
             return $page->Link('region/' . $this->ID);
         }
     }
-
-
 }

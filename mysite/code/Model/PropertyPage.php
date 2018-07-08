@@ -6,5 +6,4 @@
  */
 class PropertyPage extends Page
 {
-
 }

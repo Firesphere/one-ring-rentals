@@ -8,7 +8,6 @@ use SilverStripe\Versioned\Versioned;
 use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\View\ArrayData;
 
-
 /**
  * Class \ArticleHolder
  *
@@ -16,7 +15,6 @@ use SilverStripe\View\ArrayData;
  */
 class ArticleHolder extends Page
 {
-
     private static $has_many = array(
         'Categories' => 'ArticleCategory'
     );

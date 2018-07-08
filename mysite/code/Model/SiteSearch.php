@@ -6,5 +6,4 @@
  */
 class SiteSearch extends Page
 {
-
 }

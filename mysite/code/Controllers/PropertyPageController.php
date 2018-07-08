@@ -15,7 +15,6 @@ use SilverStripe\Control\HTTPRequest;
  */
 class PropertyPageController extends PageController
 {
-
     private static $allowed_actions = [
         'property'
     ];
