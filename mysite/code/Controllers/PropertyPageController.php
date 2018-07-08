@@ -1,13 +1,10 @@
 <?php
 
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Dev\Debug;
 
 /**
- * Created by PhpStorm.
- *
- * User: simon
- * Date: 08-Jul-18
- * Time: 14:05
+ * Class \PropertyPageController
  *
  * @property \PropertyPage dataRecord
  * @method \PropertyPage data()
@@ -22,9 +19,11 @@ class PropertyPageController extends PageController
     /**
      * @param HTTPRequest $request
      */
-    public function getProperty(HTTPRequest $request)
+    public function property(HTTPRequest $request)
     {
         $params = $this->getURLParams();
-        $this->Property = Property::get()->byID($params['ID']);
+        $this->Item = Property::get()->byID($params['ID']);
+
+        return $this;
     }
 }

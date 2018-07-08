@@ -4,6 +4,11 @@ use SilverStripe\ORM\DataList;
 use SilverStripe\Control\Controller;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * Class \BlogCategoryExtension
+ *
+ * @property \BlogCategoryExtension $owner
+ */
 class BlogCategoryExtension extends DataExtension
 {
     /**

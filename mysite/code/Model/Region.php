@@ -90,4 +90,9 @@ class Region extends DataObject
             return $page->Link('region/' . $this->ID);
         }
     }
+
+    public function getContent()
+    {
+        return $this->Description;
+    }
 }
