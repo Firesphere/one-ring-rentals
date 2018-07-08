@@ -17,5 +17,7 @@ class OneRingIndex extends SolrIndex
 
         $this->addFulltextField('Title');
         $this->addFulltextField('Content');
+        $this->addFulltextField('Regions.Title');
+        $this->addFulltextField('Regions.Description');
     }
 }
