@@ -1,9 +1,16 @@
 <?php
 
-use SilverStripe\ORM\PaginatedList;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\PaginatedList;
 
+/**
+ * Class \ArticleHolderController
+ *
+ * @property \ArticleHolder dataRecord
+ * @method \ArticleHolder data()
+ * @mixin \ArticleHolder dataRecord
+ */
 class ArticleHolderController extends PageController
 {
 
@@ -85,12 +92,12 @@ class ArticleHolderController extends PageController
 
         $this->articleList = $this->articleList->filter(array(
             'Date:GreaterThanOrEqual' => $startDate,
-            'Date:LessThan' => $endDate
+            'Date:LessThan'           => $endDate
         ));
 
         return array(
             'StartDate' => DBField::create_field('SS_DateTime', $startDate),
-            'EndDate' => DBField::create_field('SS_DateTime', $endDate)
+            'EndDate'   => DBField::create_field('SS_DateTime', $endDate)
         );
 
     }

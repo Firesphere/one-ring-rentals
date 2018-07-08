@@ -4,6 +4,11 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Control\HTTPRequest;
 
+/**
+ * Class \RegionsPage
+ *
+ * @method \SilverStripe\ORM\DataList|\Region[] Regions()
+ */
 class RegionsPage extends Page
 {
 

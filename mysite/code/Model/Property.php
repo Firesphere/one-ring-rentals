@@ -14,6 +14,22 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\ORM\DataObject;
 
+/**
+ * Class \Property
+ *
+ * @property string $Title
+ * @property float $PricePerNight
+ * @property int $Bedrooms
+ * @property int $Bathrooms
+ * @property boolean $FeaturedOnHomepage
+ * @property string $AvailableStart
+ * @property string $AvailableEnd
+ * @property string $Description
+ * @property int $RegionID
+ * @property int $PrimaryPhotoID
+ * @method \Region Region()
+ * @method \SilverStripe\Assets\Image PrimaryPhoto()
+ */
 class Property extends DataObject
 {
 

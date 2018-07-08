@@ -8,6 +8,17 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Control\Controller;
 use SilverStripe\ORM\DataObject;
 
+/**
+ * Class \Region
+ *
+ * @property string $Title
+ * @property string $Description
+ * @property int $PhotoID
+ * @property int $RegionsPageID
+ * @method \SilverStripe\Assets\Image Photo()
+ * @method \RegionsPage RegionsPage()
+ * @method \SilverStripe\ORM\DataList|\ArticlePage[] Articles()
+ */
 class Region extends DataObject
 {
 

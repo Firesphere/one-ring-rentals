@@ -1,9 +1,15 @@
 <?php
 
-use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * Class \BlogPostExtension
+ *
+ * @property \BlogPostExtension $owner
+ * @property boolean $IsFeatured
+ */
 class BlogPostExtension extends DataExtension
 {
     /**

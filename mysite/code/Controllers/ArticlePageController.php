@@ -1,13 +1,21 @@
 <?php
+
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\RequiredFields;
-use SilverStripe\Forms\Form;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 
+/**
+ * Class \ArticlePageController
+ *
+ * @property \ArticlePage dataRecord
+ * @method \ArticlePage data()
+ * @mixin \ArticlePage dataRecord
+ */
 class ArticlePageController extends PageController
 {
     private static $allowed_actions = array(
@@ -62,7 +70,6 @@ class ArticlePageController extends PageController
 
         $this->getRequest()->getSession()->clear("FormData.{$form->getName()}.data");
         $form->sessionMessage('Thanks for your comment', 'good');
-
 
 
         return $this->redirectBack();

@@ -2,6 +2,10 @@
 
 use SilverStripe\Admin\ModelAdmin;
 
+/**
+ * Class \PropertyAdmin
+ *
+ */
 class PropertyAdmin extends ModelAdmin
 {
     private static $menu_title = 'Properties';

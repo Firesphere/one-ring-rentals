@@ -1,14 +1,21 @@
 <?php
 
 use SilverStripe\Control\HTTPRequest;
-use SilverStripe\ORM\PaginatedList;
-use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\DropdownField;
-use SilverStripe\ORM\ArrayLib;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
+use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\ArrayLib;
+use SilverStripe\ORM\PaginatedList;
 
+/**
+ * Class \PropertySearchPageController
+ *
+ * @property \PropertySearchPage dataRecord
+ * @method \PropertySearchPage data()
+ * @mixin \PropertySearchPage dataRecord
+ */
 class PropertySearchPageController extends PageController
 {
 
@@ -29,7 +36,7 @@ class PropertySearchPageController extends PageController
             $endDate = date('Y-m-d', strtotime($nightAdder, $arrivalStamp));
 
             $properties = $properties->filter(array(
-                'AvailableStart:LessThanOrEqual' => $startDate,
+                'AvailableStart:LessThanOrEqual'  => $startDate,
                 'AvailableEnd:GreaterThanOrEqual' => $endDate
             ));
         }

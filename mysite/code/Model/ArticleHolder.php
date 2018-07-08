@@ -9,6 +9,11 @@ use SilverStripe\ORM\FieldType\DBDate;
 use SilverStripe\View\ArrayData;
 
 
+/**
+ * Class \ArticleHolder
+ *
+ * @method \SilverStripe\ORM\DataList|\ArticleCategory[] Categories()
+ */
 class ArticleHolder extends Page
 {
 

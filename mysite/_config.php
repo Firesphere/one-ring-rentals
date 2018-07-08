@@ -1,5 +1,6 @@
 <?php
 
+use SilverStripe\FullTextSearch\Solr\Solr;
 use SilverStripe\i18n\i18n;
 use SilverStripe\Control\Director;
 
@@ -14,13 +15,10 @@ require_once('conf/ConfigureFromEnv.php');
 // Set the site locale
 i18n::set_locale('en_US');
 
-if(Director::isTest()) {
-    SS_Log::add_writer(new SS_LogFileWriter('../silverstripe-errors-warnings.log'), SS_Log::WARN, '<=');
-
-    SS_Log::add_writer(new SS_LogFileWriter('../silverstripe-errors.log'), SS_Log::ERR);
-}
-
-if(Director::isLive()) {
-    SS_Log::add_writer(new SS_LogEmailWriter('me@example.com'), SS_Log::ERR);
-}
-
+Solr::configure_server(array(
+    'host' => 'localhost',
+    'indexstore' => array(
+        'mode' => 'file',
+        'path' => BASE_PATH . '/.solr', // The (locally accessible) path to write the index configurations to
+    )
+));

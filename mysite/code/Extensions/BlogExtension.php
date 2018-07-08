@@ -1,9 +1,14 @@
 <?php
 
 use SilverStripe\Control\Controller;
-use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\ORM\DataList;
 
+/**
+ * Class \BlogExtension
+ *
+ * @property \BlogExtension $owner
+ */
 class BlogExtension extends DataExtension
 {
     /**

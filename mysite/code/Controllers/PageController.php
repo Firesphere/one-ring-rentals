@@ -1,9 +1,16 @@
 <?php
 
-use SilverStripe\View\Requirements;
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\View\Requirements;
 use SilverStripe\View\ThemeResourceLoader;
 
+/**
+ * Class \PageController
+ *
+ * @property \Page dataRecord
+ * @method \Page data()
+ * @mixin \Page dataRecord
+ */
 class PageController extends ContentController
 {
 

@@ -9,6 +9,10 @@ Only:
 ---
 SilverStripe\Control\Email\Email:
   send_all_emails_to: me@example.com
+SilverLeague\IDEAnnotator\DataObjectAnnotator:
+  enabled: true
+  enabled_modules:
+    - mysite
 ---
 Except:
   environment: dev

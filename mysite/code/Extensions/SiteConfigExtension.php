@@ -1,18 +1,28 @@
 <?php
 
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * Class \SiteConfigExtension
+ *
+ * @property \SilverStripe\SiteConfig\SiteConfig|\SiteConfigExtension $owner
+ * @property string $FacebookLink
+ * @property string $TwitterLink
+ * @property string $GoogleLink
+ * @property string $YouTubeLink
+ * @property string $FooterContent
+ */
 class SiteConfigExtension extends DataExtension
 {
 
     private static $db = array(
-        'FacebookLink' => 'Varchar',
-        'TwitterLink' => 'Varchar',
-        'GoogleLink' => 'Varchar',
-        'YouTubeLink' => 'Varchar',
+        'FacebookLink'  => 'Varchar',
+        'TwitterLink'   => 'Varchar',
+        'GoogleLink'    => 'Varchar',
+        'YouTubeLink'   => 'Varchar',
         'FooterContent' => 'Text'
     );
 

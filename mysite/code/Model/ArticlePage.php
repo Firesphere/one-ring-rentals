@@ -11,6 +11,21 @@ use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\DropdownField;
 
 
+/**
+ * Class \ArticlePage
+ *
+ * @property string $Date
+ * @property string $Teaser
+ * @property string $Author
+ * @property int $PhotoID
+ * @property int $BrochureID
+ * @property int $RegionID
+ * @method \SilverStripe\Assets\Image Photo()
+ * @method \SilverStripe\Assets\File Brochure()
+ * @method \Region Region()
+ * @method \SilverStripe\ORM\DataList|\ArticleComment[] Comments()
+ * @method \SilverStripe\ORM\ManyManyList|\ArticleCategory[] Categories()
+ */
 class ArticlePage extends Page
 {
     private static $db = array(

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Class \HomePageController
+ *
+ * @property \HomePage dataRecord
+ * @method \HomePage data()
+ * @mixin \HomePage dataRecord
+ */
 class HomePageController extends PageController
 {
 

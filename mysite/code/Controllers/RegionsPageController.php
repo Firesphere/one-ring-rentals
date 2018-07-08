@@ -1,5 +1,14 @@
 <?php
 
+use SilverStripe\Control\HTTPRequest;
+
+/**
+ * Class \RegionsPageController
+ *
+ * @property \RegionsPage dataRecord
+ * @method \RegionsPage data()
+ * @mixin \RegionsPage dataRecord
+ */
 class RegionsPageController extends PageController
 {
 
@@ -18,7 +27,7 @@ class RegionsPageController extends PageController
 
         return array(
             'Region' => $region,
-            'Title' => $region->Title
+            'Title'  => $region->Title
         );
     }
 

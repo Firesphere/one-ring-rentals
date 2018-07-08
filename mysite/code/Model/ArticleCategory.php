@@ -4,6 +4,14 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 
+/**
+ * Class \ArticleCategory
+ *
+ * @property string $Title
+ * @property int $ArticleHolderID
+ * @method \ArticleHolder ArticleHolder()
+ * @method \SilverStripe\ORM\ManyManyList|\ArticlePage[] Articles()
+ */
 class ArticleCategory extends DataObject
 {
 

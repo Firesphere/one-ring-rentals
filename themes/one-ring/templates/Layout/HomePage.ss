@@ -9,14 +9,14 @@
 
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
-		    <div class="item active"id="slide1" style="background: url(http://placehold.it/1920x605) no-repeat left center; background-size: cover;"> <!-- Ready for JS Injection -->
+		    <div class="item active"id="slide1" style="background: url(http://via.placeholder.com/1920x605) no-repeat left center; background-size: cover;"> <!-- Ready for JS Injection -->
 		      <div class="carousel-caption">
 				<div class="caption sfr slider-title">Breathtaking views</div>
 				<div class="caption sfl slider-subtitle">Relaxation in the Bay of Belfalas</div>
 				<a href="#" class="caption sfb btn btn-default btn-lg">Learn More</a>
 		      </div>
 		    </div>
-		    <div class="item" id="slide2" style="background: url(http://placehold.it/1920x605) no-repeat left center; background-size: cover;"> 
+		    <div class="item" id="slide2" style="background: url(http://via.placeholder.com/1920x605) no-repeat left center; background-size: cover;"> 
 		      <div class="carousel-caption">
 				<div class="caption sfr slider-title">The simple life</div>
 				<div class="caption sfl slider-subtitle">Lush gardens in Mordor</div>
@@ -144,38 +144,38 @@
 								<div id="regions">
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt=""  />
+											<img src="http://via.placeholder.com/194x194" alt=""  />
 											<h3>Rhovanion</h3>
 										</a>
 									</div>
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt="" />
+											<img src="http://via.placeholder.com/194x194" alt="" />
 											<h3>Eriador</h3>
 										</a>
 									</div>
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt=""  />
+											<img src="http://via.placeholder.com/194x194" alt=""  />
 											<h3>Bay of Belfalas</h3>
 										</a>
 									</div>
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt="" />
+											<img src="http://via.placeholder.com/194x194" alt="" />
 											<h3>Mordor</h3>
 										</a>
 									</div>
 
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt=""  />
+											<img src="http://via.placeholder.com/194x194" alt=""  />
 											<h3>The Southwest</h3>
 										</a>
 									</div>
 									<div class="item">
 										<a href="#">
-											<img src="http://placehold.it/194x194" alt="" />
+											<img src="http://via.placeholder.com/194x194" alt="" />
 											<h3>Arnor</h3>
 										</a>
 									</div>
@@ -226,7 +226,7 @@
 							<li class="col-md-12">
 								<div class="image">
 									<a href="blog-detail.html"></a>
-									<img alt="" src="http://placehold.it/100x100">
+									<img alt="" src="http://via.placeholder.com/100x100">
 								</div>
 								
 								<ul class="top-info">
@@ -238,7 +238,7 @@
 							<li class="col-md-12">
 								<div class="image">
 									<a href="blog-detail.html"></a>
-									<img alt="" src="http://placehold.it/100x100">
+									<img alt="" src="http://via.placeholder.com/100x100">
 								</div>
 								
 								<ul class="top-info">
@@ -250,7 +250,7 @@
 							<li class="col-md-12">
 								<div class="image">
 									<a href="blog-detail.html"></a>
-									<img alt="" src="http://placehold.it/100x100">
+									<img alt="" src="http://via.placeholder.com/100x100">
 								</div>
 								
 								<ul class="top-info">
@@ -262,7 +262,7 @@
 							<li class="col-md-12">
 								<div class="image">
 									<a href="blog-detail.html"></a>
-									<img alt="" src="http://placehold.it/100x100">
+									<img alt="" src="http://via.placeholder.com/100x100">
 								</div>
 								
 								<ul class="top-info">
@@ -280,7 +280,7 @@
 							<h2 class="section-title">Activity</h2>
 							<ul class="activity">
 								<li class="col-lg-12">
-									<a href="#"><img src="http://placehold.it/70x70" alt="" /></a>
+									<a href="#"><img src="http://via.placeholder.com/70x70" alt="" /></a>
 									<div class="info">										
 										<h5>Sam Minnée reviewed <a href="#">The House With No Windows</a></h5>
 										<p>Awesome solitary confinement, mate. Spot on. Sweet as.</p>
@@ -288,9 +288,9 @@
 									</div>
 								</li>
 								<li class="col-lg-12">
-									<a href="#"><img src="http://placehold.it/70x70" alt="" /></a>
+									<a href="#"><img src="http://via.placeholder.com/70x70" alt="" /></a>
 									<div class="info">
-										<h5>Ingo Schoomer asked a question about <a href="#">The Mistake by the Lake</a></h5>
+										<h5>Ingo Schomer asked a question about <a href="#">The Mistake by the Lake</a></h5>
 										<p>Has this house been unit tested?</p>
 										<h6>37 minutes ago</h6>
 									</div>
