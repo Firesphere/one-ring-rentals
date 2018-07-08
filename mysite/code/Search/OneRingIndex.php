@@ -14,8 +14,11 @@ class OneRingIndex extends SolrIndex
     public function init()
     {
         $this->addClass(SiteTree::class);
+        $this->addClass(\Region::class);
+        $this->addClass(\Property::class);
 
         $this->addFulltextField('Title');
+        $this->addFulltextField('Description');
         $this->addFulltextField('Content');
         $this->addFulltextField('Regions.Title');
         $this->addFulltextField('Regions.Description');
