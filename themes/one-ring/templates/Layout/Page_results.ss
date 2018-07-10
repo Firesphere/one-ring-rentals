@@ -21,11 +21,11 @@
             </div>
 
             <div class="sidebar gray col-sm-4">
-                <% if $Menu(2) %>
-                    <h2 class="section-title">In this section</h2>
+                <% if $Facets %>
+                    <h2 class="section-title">Regions</h2>
                     <ul class="categories subnav">
-                        <% loop $Menu(2) %>
-                            <li><a class="$LinkingMode" href="$Link">$MenuTitle</a></li>
+                        <% loop $Facets.Region %>
+                            <li><a class="$LinkingMode" href="$Top.Link?search=$Top.Query&{$ClassName}[]={$ID}">$Title ($FacetCount)</a></li>
                         <% end_loop %>
                     </ul>
                 <% end_if %>

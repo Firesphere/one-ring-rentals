@@ -3,6 +3,9 @@ SilverStripe\View\SSViewer:
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
+SilverStripe\FullTextSearch\Solr\SolrIndex:
+  extensions:
+    - SolrIndexExtension
 ---
 Only:
   environment: dev

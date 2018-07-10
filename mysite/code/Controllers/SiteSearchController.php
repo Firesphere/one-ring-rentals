@@ -20,19 +20,38 @@ class SiteSearchController extends PageController
 {
     protected $Query;
 
+    protected $SearchLink;
+
     public function index(HTTPRequest $request)
     {
         $searchVars = $request->getVar('search');
+        $vars = $request->getVars();
         if ($searchVars) {
             /** @var OneRingIndex $index */
             $index = Injector::inst()->get(OneRingIndex::class);
+
             $query = new SearchQuery();
             $this->Query = $searchVars;
             $query->addSearchTerm($searchVars);
 
-            $this->dataRecord->Results = $index->search($query)->Matches;
+            $index->setFieldBoosting('RegionsPage_Regions_Title', 5);
+            $index->addFacetField('RegionsPage.Regions.ID');
+            $index->addFacetField('Property.RegionID');
+            $facetedFields = SolrIndexExtension::$facet_fields;
+            foreach ($facetedFields as $facetedField => $solrFields) {
+                if (isset($vars[$facetedField])) {
+                    // This... is a bug, it treats the filters as "AND", not "OR"
+                    foreach ($solrFields as $field) {
+                        $query->addFilter($field, $vars[$facetedField]);
+                    }
+                }
+            }
 
-            $response = $this->customise(['SearchResults' => $this->SearchResults]);
+            $result = $index->search($query);
+            $this->Results = $result->Matches;
+            $this->Facets = $result->Facets;
+
+            $response = $this->customise(['SearchResults' => $this->Results, 'Facets' => $this->Facets]);
 
             return $response->renderWith(['Page_results', 'Page']);
         }
